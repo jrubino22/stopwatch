@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align:center;
+}
+
+#bigDiv {
+    border: 2px solid blue;
+    margin: 20px 10px 20px 10px;
+    height: 300px;
+}
+
+#displayDiv {
+    border: 1px solid black;
+    margin: 5px 10px 30px 10px;
+    height: 30px
+}
+
+#startDiv {
+    border: 1px solid red;
+    
+    float: left;
+}
+
+#stopDiv {
+    border: 1px solid red;
+    float: center;
+}
+
+#resetDiv {
+    border: 1px solid red;
+    float: right;
+}
