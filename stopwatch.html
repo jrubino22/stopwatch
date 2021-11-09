@@ -4,22 +4,17 @@
     <meta charset="utf-8" />
     <title>Stopwatch</title>
     <link rel="stylesheet" href="stopwatch-styles.css"/>
+    <script src="stopwatch.js"></script>
 </head>
 <body>
-    <h1>Stopwatch</h1>
-    <div id="bigDiv">
-        <h2>Time</h2>
-        <div id="displayDiv">
+    <div class="bigDiv"> 
+        <div class="outputScreen">
+            <div class="previousOperand">123.3</div>
+            <div class="currentOperand">00:00:00</div> 
         </div>
-        <div id="startDiv" class="controlDiv">
-            Start
-        </div>
-        <div id="stopDiv" class="controlDiv">
-            Stop
-        </div>
-        <div id="resetDiv" class="controlDiv">
-            Reset
-        </div>
+        <button data-start>Start</button>
+        <button data-stop>Stop</button>
+        <button data-start>Reset</button>
     </div>
 </body>
 </html>

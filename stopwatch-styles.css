@@ -1,35 +1,57 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 h1 {
     text-align: center;
 }
 
-h2 {
-    text-align:center;
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, orange, blue)
 }
 
-#bigDiv {
-    border: 2px solid blue;
-    margin: 20px 10px 20px 10px;
-    height: 300px;
+.bigDiv {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows:  minmax(120px, auto)repeat(1, 100px);  /*minmax 120, auto means it will start at 120 but grow how ever large it has to to accomodate text */
+
 }
 
-#displayDiv {
-    border: 1px solid black;
-    margin: 5px 10px 30px 10px;
-    height: 30px
+.bigDiv > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, .75);
+    outline: none;
 }
 
-#startDiv {
-    border: 1px solid red;
-    
-    float: left;
+.bigDiv > button:hover {
+    background: rgba(255, 255, 255, .9);
 }
 
-#stopDiv {
-    border: 1px solid red;
-    float: center;
+.outputScreen {
+    grid-column: 1/ -1;  /*we want it to go from column 1, to column -1*/
+    background: rgba(0, 0, 0, .65);
+    display: flex;  /*The Flexible Box Module, usually referred to as flexbox, was designed as a one-dimensional layout model, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities*/
+    align-items: flex-end;  /*aligns our items to the right*/
+    justify-content: space-around; /*puts as much space between our elements as possible*/
+    flex-direction: column; /* lines up our elements vertically*/
+    padding: 10px;
+    word-wrap: break-word; /*means a word can break at any time in the middle of our word. useful because our numbers may need to start on a new line*/
+    word-break: break-all;
 }
 
-#resetDiv {
-    border: 1px solid red;
-    float: right;
+.previousOperand {
+    color: rgba(255, 240, 245, .75);
+    font-size: 1.2rem;
+}
+
+.currentOperand {
+    color: white;
+    font-size: 2.7rem;
 }
